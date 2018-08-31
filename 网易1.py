@@ -28,45 +28,4 @@ line = sys.stdin.readline().strip()
 values = list(map(int, line.split()))
 N = values[0]
 M = values[1]
-dic = {}
-for i in range(N):
-    line = sys.stdin.readline().strip()
-    values = list(map(int, line.split()))
-    if values[0] not in dic:
-        dic[values[0]] = values[1]
-    else:
-        dic[values[0]] = max(values[1], dic[values[0]])
-capability = sorted(list(dic.keys()))
-line = sys.stdin.readline().strip()
-people = list(map(int, line.split()))
 
-money = []
-can_job = []
-for i in range(len(people)):
-    for c in range(len(capability)):
-        if people[i] >= capability[c]:
-            can_job.append(dic[capability[c]])
-        else:
-            continue
-    if len(can_job) == 0:
-        print(0)
-    else:
-        print(max(can_job))
-
-
-
-
-
-
-#
-# def search(people, capab):
-#     s = 0
-#     e = len(capab) - 1
-#     while s <= e:
-#         mid = len(capab) // 2
-#     if people == capab[mid]:
-#         return capab[mid]
-#     elif people < capab[mid]:
-#         e = mid - 1
-#     else:
-#

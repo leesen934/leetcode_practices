@@ -26,19 +26,6 @@
 line = "typedef int INT; typedef IiNT** INTP;"
 list = list(map(str, line.split(";")))
 # print(list)
-sys_type = "int char float double bool void * **"
-# for i in range(len(list)):
-#     if len(list[i]) != 0:
-#         cus_type = list[i].split()
-#         # print(cus_type)
-#         for j in cus_type:
-#             if j in sys_type:
-
-if list[0].split()[1] not in sys_type:
-    print("none")
-
-if len(list) > 1 and list[1].split()[1] not in list[0]:
-    print("none")
 
 
 # line = sys.stdin.readline().strip()

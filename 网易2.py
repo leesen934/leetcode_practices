@@ -29,7 +29,6 @@ values = list(map(int, line.split()))
 start = values[0]
 end = values[1]
 
-for
 
 def f(n):
     if n == 1:
